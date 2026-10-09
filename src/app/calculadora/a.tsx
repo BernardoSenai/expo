@@ -30,14 +30,26 @@ function getDevMenuHint() {
 }
 
 export default function Pitagoras() {
-    const [number, onChangeNumber] = useState('');
+    
+    const [catetoA, onChangeTextA] = useState(0);
+    const [catetoB, onChangeTextB] = useState(0);
+    const [hipo, onChangeTextH] = useState(0);
+    const calc = () => {
+    let resultado=0
+        if (hipo == "") {
+            resultado = (c1**2 + c2**2)**0.5
+        }else if(catetoA == ""){
+            resultado = (h**2 - c2**2)**0.5
+        }else if(catetoB == ""){
+            resultado = h**2 - c1**2**0.5
+        }
+    }
     return(
     <SafeAreaProvider>
       <SafeAreaView>
         <TextInput
           style={styles.input}
-          onChangeText={onChangeNumber}
-          value={number}
+          value={"catetoA"}
           placeholder="useless placeholder"
           keyboardType="numeric"
         />
