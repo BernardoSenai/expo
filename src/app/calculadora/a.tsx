@@ -1,55 +1,56 @@
-import * as Device from 'expo-device';
-import { Platform, StyleSheet, TextInput } from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-
-import { AnimatedIcon } from '@/components/animated-icon';
-import { HintRow } from '@/components/hint-row';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { WebBadge } from '@/components/web-badge';
-import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
-import {useState} from 'react';
+import { useState } from 'react';
 
 
 export default function Pitagoras() {
     
-    const [catetoA, onChangeTextA] = useState(0);
-    const [catetoB, onChangeTextB] = useState(0);
-    const [hipo, onChangeTextH] = useState(0);
-    let resultado=0
+    const [catetoA, onChangeTextA] = useState('');
+    const [catetoB, onChangeTextB] = useState('');
+    const [hipo, onChangeTextH] = useState('');
 
     const calc = () => {
-    let resultado = 0
-        if (hipo == 0) {
-            resultado = (catetoA**2 + catetoB**2)**0.5
+        const a = Number(catetoA);
+        const b = Number(catetoB);
+        const h = Number(hipo);
+        let resultado = 0;
+        if (h === 0) {
+            resultado = (a ** 2 + b ** 2) ** 0.5;
             console.log(resultado);
-        }else if(catetoA == 0){
-            resultado = (hipo**2 - catetoB**2)**0.5
+        } else if (a === 0) {
+            resultado = (h ** 2 - b ** 2) ** 0.5;
             console.log(resultado);
-        }else if(catetoB == 0){
-            resultado = hipo**2 - catetoA**2**0.5
+        } else if (b === 0) {
+            resultado = (h ** 2 - a ** 2) ** 0.5;
             console.log(resultado);
-        }return resultado
+        }
+        return resultado;
     }
-calc();
+    calc();
     return(
     <SafeAreaProvider>
       <SafeAreaView>
         <TextInput
-      style={styles.input}
-      value={catetoA}
-      onChangeText={onChangeTextA}
-/>
+          style={styles.input}
+          placeholder="Cateto A"
+          value={catetoA}
+          onChangeText={onChangeTextA}
+          keyboardType="numeric"
+        />
         <TextInput
-      style={styles.input}
-      value={catetoB}
-      onChangeText={onChangeTextB}
-/>
+          style={styles.input}
+          placeholder="Cateto B"
+          value={catetoB}
+          onChangeText={onChangeTextB}
+          keyboardType="numeric"
+        />
         <TextInput
-      style={styles.input}
-      value={hipo}
-      onChangeText={onChangeTextH}
-/>
+          style={styles.input}
+          placeholder="Hipotenusa"
+          value={hipo}
+          onChangeText={onChangeTextH}
+          keyboardType="numeric"
+        />
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -57,9 +58,11 @@ calc();
 
 const styles = StyleSheet.create({
   input: {
-    flex: 0,
-    justifyContent: 'center',
-    borderWidth:1,
-    flexDirection: 'row'
+    height: 48,
+    margin: 12,
+    paddingHorizontal: 12,
+    borderWidth: 1,
+    borderColor: '#666',
+    color: '#111',
   }
 });
