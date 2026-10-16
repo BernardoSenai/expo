@@ -37,7 +37,11 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "test": "jest --watchALL"
   },
-  "private": true
+  "private": true,
+  "jest": {
+    "present": "jest-expo"
+  }
 }
