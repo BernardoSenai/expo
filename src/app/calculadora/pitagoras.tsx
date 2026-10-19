@@ -32,6 +32,11 @@ export default function Pitagoras() {
       <SafeAreaView>
         <TextInput
           style={styles.input}
+          placeholder="ta aq soh pra nao fuder tudo"
+          keyboardType="numeric"
+        />
+        <TextInput
+          style={styles.input}
           placeholder="Cateto A"
           value={catetoA}
           onChangeText={onChangeTextA}
