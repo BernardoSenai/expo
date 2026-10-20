@@ -27,12 +27,20 @@ export default function AppTabs() {
           renderingMode="template"
         />
       </NativeTabs.Trigger>
-      <NativeTabs.Trigger name="caculadora/pitagoras">
+      <NativeTabs.Trigger name="calculadora/bhaskara">
+        <NativeTabs.Trigger.Label>bhaskara</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          src={require('@/assets/images/tabIcons/explore.png')}
+          renderingMode="template"
+        />
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="calculadora/pitagoras">
         <NativeTabs.Trigger.Label>pitagoras</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon
           src={require('@/assets/images/tabIcons/explore.png')}
           renderingMode="template"
           />
+          
       </NativeTabs.Trigger>
     </NativeTabs>
   );
