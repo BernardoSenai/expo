@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, Alert } from 'react-native';
+import { StyleSheet, TextInput, Alert, Button } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useState } from 'react';
 
@@ -17,15 +17,18 @@ export default function Pitagoras() {
         if (h === 0) {
             resultado = (a ** 2 + b ** 2) ** 0.5;
             console.log(resultado);
+            alert(resultado)
         } else if (a === 0) {
             resultado = (h ** 2 - b ** 2) ** 0.5;
             console.log(resultado);
+            alert(resultado)
         } else if (b === 0) {
             resultado = (h ** 2 - a ** 2) ** 0.5;
             console.log(resultado);
+            alert(resultado)
         }
     }
-    calc();
+
     return(
     <SafeAreaProvider>
       <SafeAreaView>
@@ -55,6 +58,7 @@ export default function Pitagoras() {
           onChangeText={onChangeTextH}
           keyboardType="numeric"
         />
+        <Button title="Calcular" onPress={calc} />
       </SafeAreaView>
     </SafeAreaProvider>
   );

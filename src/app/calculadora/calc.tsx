@@ -21,14 +21,22 @@ export default function calculadora() {
 
         if(ope == "+"){
             resultado = mem + num
+            console.log(resultado);
+            alert(resultado)
         }
         else if(ope == "-"){
             resultado = mem - num
+            console.log(resultado);
+            alert(resultado)
         }
         else if(ope == "*"){
             resultado = mem * num
+            console.log(resultado);
+            alert(resultado)
         }else if(ope == "/"){
             resultado = mem / num
+            console.log(resultado);
+            alert(resultado)
         }
         
     }

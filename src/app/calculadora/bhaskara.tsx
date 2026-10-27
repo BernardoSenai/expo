@@ -53,7 +53,6 @@ export default function PitagorasScreen() {
   const [valueC, onChangeTextC] = useState(0);
 
   const calc = () => {
-    Alert.alert("...");
     console.log("valueA", valueA);
     console.log("valueB", valueB);
     console.log("valueC", valueC);
@@ -65,11 +64,13 @@ export default function PitagorasScreen() {
     if (delta === 0) {
       const x1 = (valueB * -1) / (2 * valueA);
       console.log("x1", x1);
+      alert(`x1=${x1}`)
     } else if (delta > 0) {
       const x1 = (valueB * -1 + delta ** 0.5) / (2 * valueA);
       const x2 = (valueB * -1 - delta ** 0.5) / (2 * valueA);
       console.log("x1", x1);
       console.log("x2", x2);
+      alert(`x1=${x1} x2=${x2}`)
     } else {
       console.log("Error");
     }
