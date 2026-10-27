@@ -33,6 +33,14 @@ export default function AppTabs() {
           src={require('@/assets/images/tabIcons/explore.png')}
           renderingMode="template"
         />
+        <NativeTabs.Trigger name="calculadora/calc">
+        <NativeTabs.Trigger.Label>calculadora</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          src={require('@/assets/images/tabIcons/explore.png')}
+          renderingMode="template"
+          />
+          
+      </NativeTabs.Trigger>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="calculadora/pitagoras">
         <NativeTabs.Trigger.Label>pitagoras</NativeTabs.Trigger.Label>
@@ -41,14 +49,7 @@ export default function AppTabs() {
           renderingMode="template"
           />
       </NativeTabs.Trigger>
-            <NativeTabs.Trigger name="calculadora/calc">
-        <NativeTabs.Trigger.Label>calculadora</NativeTabs.Trigger.Label>
-        <NativeTabs.Trigger.Icon
-          src={require('@/assets/images/tabIcons/explore.png')}
-          renderingMode="template"
-          />
-          
-      </NativeTabs.Trigger>
+            
     </NativeTabs>
   );
 }
