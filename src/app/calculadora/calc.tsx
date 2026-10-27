@@ -11,7 +11,7 @@ export default function calculadora() {
     
     const [numero, onChangeTextA] = useState('');
     const [memoria, onChangeTextB] = useState('');
-    const [operacao, onChangeTextH] = useState('');
+    const [operacao, onChangeTextC] = useState('');
 
     const calc = () => {
         const num = Number(numero);
@@ -25,9 +25,11 @@ export default function calculadora() {
         else if(ope == "-"){
             resultado = mem - num
         }
-        else if(ope == "*")(
+        else if(ope == "*"){
             resultado = mem * num
-        )
+        }else if(ope == "/"){
+            resultado = mem / num
+        }
         
     }
     calc();
@@ -35,20 +37,19 @@ export default function calculadora() {
        <ThemedView style={styles.container}>
          <SafeAreaView style={styles.safeArea}>
            <ThemedView style={styles.heroSection}>
-            <button/>
              <TextInput
                style={styles.input}
-               value={valueA}
+               value={numero}
                onChangeText={onChangeTextA}
              />
              <TextInput
                style={styles.input}
-               value={valueB}
+               value={memoria}
                onChangeText={onChangeTextB}
              />
              <TextInput
                style={styles.input}
-               value={valueC}
+               value={operacao}
                onChangeText={onChangeTextC}
              />
              <Button title="Calcular" onPress={calc} />
