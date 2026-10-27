@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput } from 'react-native';
+import { StyleSheet, TextInput, Alert } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useState } from 'react';
 
@@ -24,7 +24,6 @@ export default function Pitagoras() {
             resultado = (h ** 2 - a ** 2) ** 0.5;
             console.log(resultado);
         }
-        return resultado;
     }
     calc();
     return(

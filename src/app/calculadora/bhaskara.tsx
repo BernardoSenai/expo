@@ -53,7 +53,7 @@ export default function PitagorasScreen() {
   const [valueC, onChangeTextC] = useState(0);
 
   const calc = () => {
-    Alert.alert("asdasd");
+    Alert.alert("...");
     console.log("valueA", valueA);
     console.log("valueB", valueB);
     console.log("valueC", valueC);
