@@ -40,7 +40,7 @@ export default function calculadora() {
         }
         
     }
-    calc();
+
     return (
        <ThemedView style={styles.container}>
          <SafeAreaView style={styles.safeArea}>
@@ -49,17 +49,21 @@ export default function calculadora() {
                style={styles.input}
                value={numero}
                onChangeText={onChangeTextA}
-             />
-             <TextInput
-               style={styles.input}
-               value={memoria}
-               onChangeText={onChangeTextB}
+               placeholder={"digite um número aqui"}
              />
              <TextInput
                style={styles.input}
                value={operacao}
                onChangeText={onChangeTextC}
+               placeholder={"digite uma operação aqui"}
              />
+             <TextInput
+               style={styles.input}
+               value={memoria}
+               onChangeText={onChangeTextB}
+               placeholder={"digite um número aqui"}
+             />
+             
              <Button title="Calcular" onPress={calc} />
            </ThemedView>
          </SafeAreaView>
