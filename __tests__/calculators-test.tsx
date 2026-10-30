@@ -35,20 +35,14 @@ describe('Pitagoras', () => {
         const resultado = Pitagoras(a,b,h)
         expect(resultado).toBe(14.14) 
     });
-});
-
-describe('Pitagoras', () => {
-    test('CatetoB', () => {
+        test('CatetoB', () => {
         const a = 10
         const b = 0
         const h = 20
         const resultado = Pitagoras(a,b,h)
         expect(resultado).toBe(17.3) 
     });
-});
-
-describe('Pitagoras', () => {
-    test('CatetoA', () => {
+        test('CatetoA', () => {
         const a = 0
         const b = 10
         const h = 20
