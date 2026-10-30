@@ -3,6 +3,7 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useState } from 'react';
 
 
+
 export default function Pitagoras() {
     
     const [catetoA, onChangeTextA] = useState('');
